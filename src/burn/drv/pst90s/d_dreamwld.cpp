@@ -468,6 +468,8 @@ static INT32 DrvDoReset()
 	dreamwld_oki_setbank(0, 0);
 	dreamwld_oki_setbank(1, 0); // dreamwld
 
+    HiscoreReset();
+
 	return 0;
 }
 
@@ -966,7 +968,7 @@ struct BurnDriver BurnDrvBaryon = {
 	"baryon", NULL, NULL, NULL, "1997",
 	"Baryon - Future Assault (set 1)\0", NULL, "SemiCom", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
 	NULL, baryonRomInfo, baryonRomName, NULL, NULL, NULL, NULL, CommonInputInfo, BaryonDIPInfo,
 	BaryonInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1000,
 	224, 304, 3, 4
@@ -1002,7 +1004,7 @@ struct BurnDriver BurnDrvBaryona = {
 	"baryona", "baryon", NULL, NULL, "1997",
 	"Baryon - Future Assault (set 2)\0", NULL, "SemiCom", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_VERSHOOT, 0,
 	NULL, baryonaRomInfo, baryonaRomName, NULL, NULL, NULL, NULL, CommonInputInfo, BaryonDIPInfo,
 	BaryonInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1000,
 	224, 304, 3, 4
@@ -1089,7 +1091,7 @@ struct BurnDriver BurnDrvRolcrush = {
 	"rolcrush", NULL, NULL, NULL, "1999",
 	"Rolling Crush (version 1.07.E - 1999/02/11, Trust license)\0", NULL, "SemiCom / Exit (Trust license)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
+	BDF_GAME_WORKING | BDF_HISCORE_SUPPORTED, 2, HARDWARE_MISC_POST90S, GBF_PUZZLE, 0,
 	NULL, rolcrushRomInfo, rolcrushRomName, NULL, NULL, NULL, NULL, CommonInputInfo, RolcrushDIPInfo,
 	RolcrushInit, DrvExit, DrvFrame, DrvDraw, DrvScan, &DrvRecalc, 0x1000,
 	304, 224, 4, 3
