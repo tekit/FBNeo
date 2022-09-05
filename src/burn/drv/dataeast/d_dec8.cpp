@@ -3921,6 +3921,8 @@ static INT32 GondoDoReset()
 
 	RotateReset();
 
+    HiscoreReset();
+
 	return 0;
 }
 
@@ -4408,7 +4410,7 @@ struct BurnDriver BurnDrvGondo = {
 	"gondo", NULL, NULL, NULL, "1987",
 	"Gondomania (World)\0", NULL, "Data East USA", "DEC8",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL, 2, HARDWARE_PREFIX_DATAEAST, GBF_VERSHOOT, 0,
+	BDF_GAME_WORKING | BDF_ORIENTATION_VERTICAL | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_DATAEAST, GBF_VERSHOOT, 0,
 	NULL, gondoRomInfo, gondoRomName, NULL, NULL, NULL, NULL, GondoInputInfo, GondoDIPInfo,
 	GondoInit, GondoExit, GondoFrame, GondoDraw, GondoScan, &DrvRecalc, 0x400,
 	240, 256, 3, 4
