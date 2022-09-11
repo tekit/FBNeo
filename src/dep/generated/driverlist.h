@@ -1094,6 +1094,7 @@ DRV		BurnDrvmd_austrarl;
 DRV		BurnDrvmd_austrarlp;
 DRV		BurnSpecAutocrash;
 DRV		BurnSpecAutomania;
+DRV		BurnDrvMSX_automania;
 DRV		BurnSpecAutocavexpl;
 DRV		BurnDrvnes_avmahjongclubc;
 DRV		BurnDrvpce_avpoker;
@@ -1282,9 +1283,11 @@ DRV		BurnDrvcv_bankbuild;
 DRV		Burnmd_Baoxiao;
 DRV		BurnDrvsms_baraburu;
 DRV		BurnDrvBaraduke;
+DRV		BurnDrvMSX_barben;
 DRV		BurnDrvpce_barbarian;
+DRV		BurnDrvMSX_barbpt;
 DRV		BurnSpecbarbarian;
-DRV		BurnDrvMSX_barb;
+DRV		BurnDrvMSX_barbes;
 DRV		BurnSpecbarbarn2;
 DRV		BurnDrvMSX_barb2;
 DRV		BurnDrvmd_barbarianrk;
@@ -2230,7 +2233,9 @@ DRV		BurnDrvmd_budokanp;
 DRV		BurnDrvmd_budokanu;
 DRV		BurnSpecBbwws;
 DRV		BurnSpecBufonadae;
+DRV		BurnDrvMSX_bufonada;
 DRV		BurnSpecBufonadas;
+DRV		BurnDrvMSX_bufonadas;
 DRV		BurnDrvmd_bughunt;
 DRV		BurnDrvpce_bughunt;
 DRV		BurnSpecBuggyboy;
@@ -12970,6 +12975,7 @@ DRV		BurnDrvMSX_risedung;
 DRV		BurnDrvMSX_risedunga;
 DRV		BurnDrvmd_risk;
 DRV		BurnDrvRiskchal;
+DRV		BurnDrvcv_Riskyrick;
 DRV		BurnDrvmd_riskyw;
 DRV		BurnDrvmd_ristar1;
 DRV		BurnDrvmd_ristar;
@@ -15658,6 +15664,7 @@ DRV		BurnDrvnes_smbchredi;
 DRV		BurnDrvnes_smbendssmbha1;
 DRV		BurnDrvnes_smbspeh;
 DRV		BurnDrvnes_smbspe;
+DRV		BurnDrvnes_smbsp35th;
 DRV		BurnDrvnes_smbspex1;
 DRV		BurnDrvnes_smbtwopla;
 DRV		BurnDrvfds_supermarbroc;
@@ -20060,6 +20067,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_austrarlp,		// Australian Rugby League (Prototype)
 	&BurnSpecAutocrash,			// AutoCrash (Spanish) (128K)
 	&BurnSpecAutomania,			// Automania (48K)
+	&BurnDrvMSX_automania,		// Automania Remake (HB)
 	&BurnSpecAutocavexpl,		// Automated Cave Explorer (48K) (HB)
 	&BurnDrvnes_avmahjongclubc,	// AV Mahjong Club (T-Chi) (Unl)
 	&BurnDrvpce_avpoker,		// AV Poker
@@ -20248,9 +20256,11 @@ static struct BurnDriver* pDriver[] = {
 	&Burnmd_Baoxiao,			// Bao Xiao San Guo
 	&BurnDrvsms_baraburu,		// Bara Buruu (HB, v1.0)
 	&BurnDrvBaraduke,			// Baraduke
+	&BurnDrvMSX_barben,			// Barbarian (English)
 	&BurnDrvpce_barbarian,		// Barbarian (HB)
+	&BurnDrvMSX_barbpt,			// Barbarian (Portuguese)
 	&BurnSpecbarbarian,			// Barbarian (Psygnosis) (48K)
-	&BurnDrvMSX_barb,			// Barbarian (Spanish)
+	&BurnDrvMSX_barbes,			// Barbarian (Spanish)
 	&BurnSpecbarbarn2,			// Barbarian II - The Dungeon of Drax (128K)
 	&BurnDrvMSX_barb2,			// Barbarian II - The Dungeon of Drax (Euro)
 	&BurnDrvmd_barbarianrk,		// Barbarian Remake (HB)
@@ -21196,7 +21206,9 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvmd_budokanu,		// Budokan - The Martial Spirit (USA)
 	&BurnSpecBbwws,				// Buffalo Bill's Wild West Show (128K)
 	&BurnSpecBufonadae,			// Bufonada (English) (128K) (HB)
+	&BurnDrvMSX_bufonada,		// Bufonada (English) (HB)
 	&BurnSpecBufonadas,			// Bufonada (Spanish) (128K) (HB)
+	&BurnDrvMSX_bufonadas,		// Bufonada (Spanish) (HB)
 	&BurnDrvmd_bughunt,			// Bug Hunt (HB)
 	&BurnDrvpce_bughunt,		// Bug Hunt (HB)
 	&BurnSpecBuggyboy,			// Buggy Boy (128K)
@@ -31936,6 +31948,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMSX_risedunga,		// Rise Out from Dungeons (Jpn, Alt)
 	&BurnDrvmd_risk,			// Risk (USA)
 	&BurnDrvRiskchal,			// Risky Challenge
+	&BurnDrvcv_Riskyrick,		// Risky Rick (HB)
 	&BurnDrvmd_riskyw,			// Risky Woods (Euro, USA)
 	&BurnDrvmd_ristar1,			// Ristar (Euro, USA, 199408)
 	&BurnDrvmd_ristar,			// Ristar (Euro, USA, 199409)
@@ -34624,6 +34637,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvnes_smbendssmbha1,	// Super Mario Bros. Ende's SMB (Hack)
 	&BurnDrvnes_smbspeh,		// Super Mario Bros. Special (Hack, Triforce89)
 	&BurnDrvnes_smbspe,			// Super Mario Bros. Special (Hack, v1.0-rc1)
+	&BurnDrvnes_smbsp35th,		// Super Mario Bros. Special 35th Anniversary (Hack, v1.3)
 	&BurnDrvnes_smbspex1,		// Super Mario Bros. Special X1 (Hack)
 	&BurnDrvnes_smbtwopla,		// Super Mario Bros. Two Players (Hack)
 	&BurnDrvfds_supermarbroc,	// Super Mario Brothers (Hack, Spanish v1.0)
@@ -34814,7 +34828,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvCpsSsf2th,			// Super Street Fighter II Turbo (super street fighter 2 X 940223 Hispanic)
 	&BurnDrvCpsSsf2tur1,		// Super Street Fighter II Turbo (super street fighter 2 X 940223 USA)
 	&BurnDrvCpsSsf2tu,			// Super Street Fighter II Turbo (super street fighter 2 X 940323 USA)
-	&BurnDrvCpsSsf2tnl,			// Super Street Fighter II Turbo New Legacy v0.7 (Beta) (Hack by Born2SPD)
+	&BurnDrvCpsSsf2tnl,			// Super Street Fighter II Turbo New Legacy v0.7.1 (Beta) (Hack by Born2SPD)
 	&BurnDrvCpsSsf2xjr1trn,		// Super Street Fighter II X - GMC Trainer (super street fighter 2 X 940223 Japan)
 	&BurnDrvCpsSsf2xjr1d,		// Super Street Fighter II X - grand master challenge (super street fighter 2 X 940223 Japan Phoenix Edition)
 	&BurnDrvCpsSsf2xjr1r,		// Super Street Fighter II X - grand master challenge (super street fighter 2 X 940223 Japan rent version)
